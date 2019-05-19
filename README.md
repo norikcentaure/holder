@@ -14,7 +14,9 @@ The repository contains:
 
 1. **sqa**
 
-   The folder `sqa` contains the Second Quantization Algebra package, as well as the API I developed.
+   The folder `sqa` contains the modified files from a fairly recent commit of `sqa`, the Second Quantization Algebra package (as well as the API I developed).
+
+   (see: https://github.com/mussard/SecondQuantizationAlgebra.git)
 
    
 
@@ -28,18 +30,20 @@ The repository contains:
 
    The folder `dice` contains the (only slightly) modified files from a fairly recent commit of `dice`, to produce the RDMs for the workflow.
 
+   (see: https://github.com/sanshar/Dice.git)
    
 
 4. **icpt**
 
-   The folder `icpt` contains the Internally Contracted Perturbation Theory package to perform the tensor contractions and solve the Hylleraas functionals for NEVPT and MRLCC.
+   The folder `icpt` contains the modified files from a fairly recent commit of `icpt`, the Internally Contracted Perturbation Theory package to perform the tensor contractions and solve the Hylleraas functionals for NEVPT and MRLCC.
 
+   (see: https://bastien_mussard@bitbucket.org/sandeep-sharma/icnevpt2.git)
    
 
 5. **pyscf**
 
    The folder `pyscf` contains the (only slightly) modified files from a fairly recent commit of `pyscf`, which codes the workflow itself, and triggers all the necessary steps to obtain the PT energies.
 
-   
+   (see: https://github.com/sunqm/pyscf.git) 
 
 
