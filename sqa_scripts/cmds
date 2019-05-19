@@ -1,0 +1,9 @@
+
+for type in lcc nev;do echo $type ==========;for class in aaac aaav aavv acvv caav ccaa ccav ccvv 3rd;do echo $class =========;python py_oldmodel/${type}_${class}.py > inl_oldmodel/E_${type^^}_${class}.inl;done;done
+for type in lcc nev;do echo $type ==========;for class in aaac aaav aavv acvv caav ccaa ccav ccvv 3rd;do echo $class =========;python py_newmodel/${type}_${class}.py > inl_newmodel/E_${type^^}_${class}.inl;done;done
+
+for class in aaac aaav aavv acvv caav ccaa ccav ccvv 3rd;do echo $class =========;vimdiff inl_*model/*LCC*${class}*;done
+
+sed -i 's/\("[Wk]".*\)Amplitude  /\1Hamiltonian/g' inl_*/*3rd*
+sed -i 's/\( *\)Out\.pSpinClass/\1Out.Wonoff = 0;\n\1Out.E4fullcu = 1;\n\1Out.E3inlhand = 1;\n\1Out.pSpinClass/g' inl_*/*inl
+

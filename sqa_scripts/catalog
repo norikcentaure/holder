@@ -1,0 +1,23 @@
+inl_original/E_LCC_aavv.inl:        Out.E3inlhand = 0;OK
+inl_original/E_NEV_aavv.inl:        Out.E3inlhand = 0;OK
+inl_original/E_LCC_ccaa.inl:        Out.E3inlhand = 0;OK
+inl_original/E_NEV_ccaa.inl:        Out.E3inlhand = 0;OK
+inl_original/E_LCC_caav.inl:        Out.E3inlhand = 0;MOUAIS
+inl_original/E_NEV_caav.inl:        Out.E3inlhand = 0;OK
+
+inl_original/E_LCC_acvv.inl:        Out.E3inlhand = 2;OK
+inl_original/E_NEV_acvv.inl:        Out.E3inlhand = 2;OK
+inl_original/E_LCC_ccvv.inl:        Out.E3inlhand = 2;OK
+inl_original/E_NEV_ccvv.inl:        Out.E3inlhand = 2;OK
+inl_original/E_LCC_ccav.inl:        Out.E3inlhand = 2;OK
+inl_original/E_NEV_ccav.inl:        Out.E3inlhand = 2;OK
+
+
+                 #EqsRes  #order4/2    #53 
+  newmodel       A 2292   A mixed      A eecc
+__newest.wosymm  B 2352   A mixed      A eecc
+__new            B 2352   A mixed      B aeca
+__new.wsymm        1620   A mixed      B aeca
+__old            B 2352   B 4together  B aeca
+__old.wsymm      A 2292   B 4together  B aeca
+

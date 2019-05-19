@@ -1,0 +1,42 @@
+#!/bin/bash
+
+mkdir compare
+cp $1_codes_DF/* compare/
+sed -i '/auxi/d' compare/*
+
+sed -i 's/V_Cl,V_Cr/V_C/g' compare/*
+sed -i 's/V_Al,V_Ar/V_A/g' compare/*
+sed -i 's/V_Vl,V_Vr/V_V/g' compare/*
+sed -i 's/V_CA1l,V_CA1r/V_CA1/g' compare/*
+sed -i 's/V_CA2l,V_CA2r/V_CA2/g' compare/*
+sed -i 's/V_CV1l,V_CV1r/V_CV1/g' compare/*
+sed -i 's/V_CV2l,V_CV2r/V_CV2/g' compare/*
+sed -i 's/V_AV1l,V_AV1r/V_AV1/g' compare/*
+sed -i 's/V_AV2l,V_AV2r/V_AV2/g' compare/*
+
+sed -i '/V_Cr/d' compare/*
+sed -i '/V_Ar/d' compare/*
+sed -i '/V_Vr/d' compare/*
+sed -i '/V_CA1r/d' compare/*
+sed -i '/V_CA2r/d' compare/*
+sed -i '/V_CV1r/d' compare/*
+sed -i '/V_CV2r/d' compare/*
+sed -i '/V_AV1r/d' compare/*
+sed -i '/V_AV2r/d' compare/*
+
+sed -i "s/V_Cl   = sqa.tensor('int2Lcc', \[L,i1,i3\], \[\])/V_C    = sqa.tensor('int2c', [i1,i2, i3,i4], [Dsym_a, Dsym_b, Dsym_c])/g" compare/*
+sed -i "s/V_Al   = sqa.tensor('int2Laa', \[L,x1,x3\], \[\])/V_A    = sqa.tensor('int2a', [x1,x2, x3,x4], [Dsym_a, Dsym_b, Dsym_c])/g" compare/*
+sed -i "s/V_Vl   = sqa.tensor('int2Lvv', \[L,a1,a3\], \[\])/V_V    = sqa.tensor('int2v', [a1,a2, a3,a4], [Dsym_a, Dsym_b, Dsym_c])/g" compare/*
+sed -i "s/V_CA1l = sqa.tensor('int2Lcc', \[L,i1,i2\], \[\])/V_CA1  = sqa.tensor('int2ca1', [i1,x1, i2,x2], [Dsym_a, Dsym_b])/g" compare/*
+sed -i "s/V_CA2l = sqa.tensor('int2Lca', \[L,i1,x2\], \[\])/V_CA2  = sqa.tensor('int2ca2', [i1,x1, x2,i2], [])/g" compare/*
+sed -i "s/V_CV1l = sqa.tensor('int2Lcc', \[L,i1,i2\], \[\])/V_CV1  = sqa.tensor('int2cv1', [i1,a1, i2,a2], [Dsym_a, Dsym_b])/g" compare/*
+sed -i "s/V_CV2l = sqa.tensor('int2Lcv', \[L,i1,a2\], \[\])/V_CV2  = sqa.tensor('int2cv2', [i1,a1, a2,i2], [])/g" compare/*
+sed -i "s/V_AV1l = sqa.tensor('int2Laa', \[L,x1,x2\], \[\])/V_AV1  = sqa.tensor('int2av1', [x1,a1, x2,a2], [Dsym_a, Dsym_b])/g" compare/*
+sed -i "s/V_AV2l = sqa.tensor('int2Lav', \[L,x1,a2\], \[\])/V_AV2  = sqa.tensor('int2av2', [x1,a1, a2,x2], [])/g" compare/*
+
+sed -i "s/,DF=True//g" compare/*
+
+for file in compare/*;
+do
+  diff -rq $file $1_codes/$1_${file:12:-3}.py|sed "s/Files compare/vimdiff $1_codes_DF/g"|sed 's/ and / /g'|sed 's/ differ//g'
+done

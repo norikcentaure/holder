@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo '#LCC' >log
+TOOLS/generate_and_compare_lcc >> log
+echo '#LCC_DF' >>log
+TOOLS/generate_and_compare_lcc_DF >> log
+echo '#LCC_E3' >>log
+TOOLS/generate_and_compare_lcc_E3 >> log
+echo '#LCC_E4' >>log
+TOOLS/generate_and_compare_lcc_E4 >> log
+echo '#LCC_DFE4' >>log
+TOOLS/generate_and_compare_lcc_DFE4 >> log
+
+echo '#NEV' >>log
+TOOLS/generate_and_compare_nev >> log
+echo '#NEV_DF' >>log
+TOOLS/generate_and_compare_nev_DF >> log
+echo '#NEV_E3' >>log
+TOOLS/generate_and_compare_nev_E3 >> log
+echo '#NEV_E4' >>log
+TOOLS/generate_and_compare_nev_E4 >> log
+echo '#NEV_DFE4' >>log
+TOOLS/generate_and_compare_nev_DFE4 >> log
+

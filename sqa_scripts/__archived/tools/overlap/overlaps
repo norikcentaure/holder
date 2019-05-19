@@ -1,0 +1,61 @@
+ccvv----------------------------------------------------
+b[cdkl] =   2.0 V[cdkl]
+b[cdkl] =  -1.0 V[dckl]
+b[cdkl] =  -1.0 V[cdlk]
+b[cdkl] =   2.0 V[dclk]
+acvv----------------------------------------------------
+b[abip] =   2.0 E1[rp] V[abir]
+
+b[abip] =  -1.0 E1[rp] V[bair]
+ccav----------------------------------------------------
+b[ijpa] =   4.0 V[ijpa]
+
+b[ijpa] =  -2.0 E1[rp]    V[ijra]
+
+b[ijpa] =  -2.0 V[jipa]
+
+b[ijpa] =   1.0 E1[rp]    V[jira]
+
+aavv----------------------------------------------------
+b[abrs] =   0.5 V[abpq] E2[rspq]
+b[bars] =   0.5 V[abpq] E2[rsqp]
+b[abrs] =   0.5 V[bapq] E2[rsqp]
+b[bars] =   0.5 V[bapq] E2[rspq]
+ccaa----------------------------------------------------
+b[klrs] =   2.0 V[klrs]
+b[klrs] =  -1.0 V[klsr]
+b[klrs] =  -1.0 E1[qs]    V[klrq]
+b[klrs] =   0.5 E1[qr]    V[klsq]
+b[klrs] =   0.5 E1[ps]    V[klpr]
+b[klrs] =  -1.0 E1[pr]    V[klps]
+b[klrs] =   0.5 E2[pqrs]  V[klpq]
+b[klrs] =   2.0 V[lksr]
+b[klrs] =  -1.0 V[lkrs]
+b[klrs] =  -1.0 E1[qr]    V[lksq]
+b[klrs] =   0.5 E1[qs]    V[lkrq]
+b[klrs] =   0.5 E1[pr]    V[lkps]
+b[klrs] =  -1.0 E1[ps]    V[lkpr]
+b[klrs] =   0.5 E2[pqsr]  V[lkpq]
+caav----------------------------------------------------
+b1[ipqa]=   2.0  E2[rqsp] V1[aris]
+b1[ipqa]=   2.0  E1[sq]   V1[apis]
+b1[ipqa]=  -1.0  E2[rqsp] V2[rais]
+b1[ipqa]=  -1.0  E1[sq]   V2[pais]
+b2[ipqa]=  -1.0  E2[rqsp] V1[aris]
+b2[ipqa]=  -1.0  E1[sq]   V1[apis]
+b2[ipqa]=  -1.0  E2[rqps] V2[rais]
+b2[ipqa]=   2.0  E1[sq]   V2[pais]
+aaav----------------------------------------------------
+b[auvw] =   1.0 V[apqr] E1[wr] delta[qp] delta[vu]
+b[auvw] =   1.0 V[apqr] E2[vwru] delta[qp]
+b[auvw] =   1.0 V[auqr] E2[vwqr]
+b[auvw] =   1.0 V[apqr] E2[pwrq] delta[vu]
+b[auvw] =   1.0 V[apqr] E3[pvwrqu]
+aaac----------------------------------------------------
+b[abce] =   2.0 V[abcd] E1[ed]
+b[acbe] =  -1.0 V[abcd] E1[ed]
+b[abef] =  -1.0 V[abcd] E2[cfed]
+b[acef] =  -1.0 V[abcd] E2[bfde]
+b[aebf] =  -1.0 V[abcd] E2[cfde]
+b[aecf] =   2.0 V[abcd] E2[bfde]
+b[aefg] =  -1.0 V[abcd] E3[bcgdfe]

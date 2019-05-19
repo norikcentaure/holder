@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for file in lcc_codes/lcc_*$1*py;
+do
+  class=${file:14:-3}
+  file=E_LCC_${class}_E4.inl
+  echo $class
+  python lcc_codes/lcc_$class.py --cumulantE4 > new_inl/$file;
+  sed -i 's/,USAGE_\(.*\)},/,USAGE_\1, STORAGE_Memory},/g' new_inl/$file
+  diff -q current_inl/$file new_inl/$file
+done

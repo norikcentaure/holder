@@ -1,0 +1,22 @@
+#!/bin/bash
+
+sed -i 's/<E_vvcc /<E_cvcv /g' adapt
+sed -i 's/<E_vvca /<E_avcv /g' adapt
+sed -i 's/<E_ccav /<E_cvca /g' adapt
+sed -i 's/<E_vvaa /<E_avav /g' adapt
+sed -i 's/<E_ccaa /<E_caca /g' adapt
+sed -i 's/<E_vaca /<E_aacv /g' adapt
+sed -i 's/<E_avca /<E_avca /g' adapt
+sed -i 's/<E_vaaa /<E_aaav /g' adapt
+sed -i 's/<E_caaa /<E_aaca /g' adapt
+
+sed -i 's/E_vvcc >/E_vcvc >/g' adapt
+sed -i 's/E_vvca >/E_vcva >/g' adapt
+sed -i 's/E_ccav >/E_acvc >/g' adapt
+sed -i 's/E_vvaa >/E_vava >/g' adapt
+sed -i 's/E_ccaa >/E_acac >/g' adapt
+sed -i 's/E_vaca >/E_vcaa >/g' adapt
+sed -i 's/E_avca >/E_acva >/g' adapt
+sed -i 's/E_vaaa >/E_vaaa >/g' adapt
+sed -i 's/E_caaa >/E_acaa >/g' adapt
+

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+mkdir compare
+cp lcc_codes$1/* compare/
+sed -i 's/MRLCC/NEVPT/g' compare/*
+sed -i "s/pttype='NEVPT'/pttype='NEVPT'/g" compare/*
+sed -i '/V_C/d' compare/*
+sed -i '/V_AV/d' compare/*
+sed -i '/V_V/d' compare/*
+sed -i '/HD_C/d' compare/*
+sed -i '/HD_AV/d' compare/*
+sed -i '/HD_V/d' compare/*
+
+for file in compare/*;
+do
+  diff -rq $file nev_codes$1/nev_${file:12:-3}.py|sed "s/Files compare/vimdiff lcc_codes$1/g"|sed 's/ and / /g'|sed 's/ differ//g'
+done
